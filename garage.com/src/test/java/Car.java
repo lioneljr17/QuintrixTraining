@@ -20,19 +20,16 @@ public class Car {
 	public int getOdometer() {
 		return odometer;
 		}
-
-}
-
-//interface
-interface IEngine {
-
-	final int CylinderCount =0;
-	void Start ();
+	public void drive(int Distance) {
+		int distance;
+		
+		
 	}
-
-abstract class LargeEngine implements IEngine {
-
 	public void Start(){ 
 		System.out.println("Engine Started"); 
 	}
+
 }
+
+
+
