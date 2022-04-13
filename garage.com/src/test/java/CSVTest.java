@@ -12,15 +12,15 @@ public class CSVTest {
 	  String C =null;
 	  BufferedReader Base = null;
 	  String Make[] = null;
-	  String Model[] = null;
+	  String Models[] = null;
 	  try {
 		Base  = new BufferedReader (new FileReader(path));
 		while((C=Base.readLine())!= null) {
 			Make = 	C.split(",");
-			Model = C.split(",");
+			Models = C.split(",");
 			//System.out.printf(Make[0],Model[1]);
 			HashMap<String,String> newtest = new HashMap<String,String> ();
-			newtest.put(Make[0], Model[1]);
+			newtest.put(Make[0], Models[1]);
 			System.out.println(newtest);
 		}	
 	} catch (FileNotFoundException e) {
