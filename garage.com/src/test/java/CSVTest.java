@@ -33,8 +33,8 @@ public class CSVTest {
 		}	
 	} catch (FileNotFoundException e) {
 		e.printStackTrace();	
-	} catch (IOException e) {
-		e.printStackTrace();
+	} catch (IOException I) {
+		I.printStackTrace();
 	} 
 	  
 	System.out.println(ExpectedMap);
