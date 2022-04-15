@@ -7,29 +7,38 @@ import java.util.HashMap;
 
 public class CSVTest {
   @Test
-  public void f() {
-	  String path ="//Users//lioneldesroses//git/QuintrixTraining/garage.com//src//test//resources//basses.csv";
-	  String C =null;
-	  BufferedReader Base = null;
-	  String Make[] = null;
-	  String Models[] = null;
+  public void HAshMapTest() {
+	  HashMap<String,String> ExpectedMap = new HashMap<String,String> ();
+	    ExpectedMap.put("Make","Model");
+		ExpectedMap.put("Warwick","Corvette");
+		ExpectedMap.put("Warwick","Thumb");
+		ExpectedMap.put("Warwick","Streamer");
+		ExpectedMap.put("Fender","Precision");
+	    ExpectedMap.put("Fender","Jazz");
+	    ExpectedMap.put("Yamaha","BB500");
+	  
+	    HashMap<String,String> MapTest = new HashMap<String,String> ();
+	        
+	  String path = "src//test//resources//basses.csv";
+	  String sp =null;
+	  String First[] = null;
+	  String Second[] = null;
 	  try {
-		Base  = new BufferedReader (new FileReader(path));
-		while((C=Base.readLine())!= null) {
-			Make = 	C.split(",");
-			Models = C.split(",");
-			//System.out.printf(Make[0],Model[1]);
-			HashMap<String,String> newtest = new HashMap<String,String> ();
-			newtest.put(Make[0], Models[1]);
-			System.out.println(newtest);
+		  BufferedReader Base  = new BufferedReader (new FileReader(path));
+		while((sp=Base.readLine())!= null) {
+			First = sp.split(",");
+			Second = sp.split(",");
+			MapTest.put(First[0], Second[1]);
+			
 		}	
 	} catch (FileNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		e.printStackTrace();	
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	} 
-	  assertEquals(C, C,"THE FILE WAS INCORECT");  
+	  
+	System.out.println(ExpectedMap);
+	System.out.println(MapTest);
+	 assertEquals(MapTest,ExpectedMap,"one hash map did not match "); 
   }
 }
