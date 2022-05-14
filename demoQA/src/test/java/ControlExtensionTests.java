@@ -15,21 +15,30 @@ public class ControlExtensionTests extends SeleniumTestBase {
 	  String no ="No";
 	  
 	 ButonPages ButonPages =  new ButonPages(this.getDriver())
-	 .navigate()
-	 .Selectyesbutton()
-	 .SelectImpresivebutton()
-	 .SelectNobutton();
-	 ButonPages.getyesButton();
-	 ButonPages.getImpressiveButton();
-	 ButonPages.getnoButton();
+	       .navigate()
+	       .Selectyesbutton()
+	       .SelectImpresivebutton()
+	       .SelectNobutton();
+	        ButonPages.getyesButton();
+	        ButonPages.getImpressiveButton();
+	        ButonPages.getnoButton();
 	 
 	 assertEquals(ButonPages.getyesButton(),yes);
 	 assertEquals(ButonPages.getImpressiveButton(),Impressive);
 	 assertEquals(ButonPages.getnoButton(),no);
   }
+  @Test
   public void CanclickHyperLink() {
+	  String Link = "Link has responded with staus 201 and status text Created";
 	  
+	  HyperLinkPages  HyperLinkPages =new  HyperLinkPages(this.getDriver())
+			  .navigate()
+			  .ClickCreatedLink();
+			  HyperLinkPages.getLinkResponse();
+			 
+	 assertEquals( HyperLinkPages.getLinkResponse(),Link);
 	  
   }
+  
   
 }

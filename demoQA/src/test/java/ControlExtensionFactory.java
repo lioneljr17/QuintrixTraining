@@ -7,5 +7,15 @@ public class ControlExtensionFactory {
 	public static RadioGroupControlExtension getselectedRadioButton(WebElement element) {
 		 return new RadioGroupControlExtension(element);
 }
+	public static  HyperLinkControlExtension ClickCreatedLink(WebElement element) {
+		
+		return new HyperLinkControlExtension(element);
+	}
+	public static HyperLinkControlExtension getlinkResponse(WebElement element) {
+		
+		return new HyperLinkControlExtension(element);
+	}
+	
+	
 
 }
