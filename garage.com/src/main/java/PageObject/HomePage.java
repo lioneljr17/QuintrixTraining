@@ -17,12 +17,13 @@ public class HomePage extends PageObjectBase{
 		return this;
 	}
 
-	public HomePage ClickProduct() {
-		WebElement element = this.getDriver().findElement(By.className("main-item products"));
+	public ProductsPage ClickProduct() {
+		WebElement element = this.getDriver().findElement(By.cssSelector("a[class='main-item products']"));
 		element.click();
 
-		return this;
+		return new ProductsPage(this.getDriver());
 	}
-
+	
+	
 	
 }
