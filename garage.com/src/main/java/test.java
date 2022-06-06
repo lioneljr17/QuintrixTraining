@@ -8,9 +8,10 @@ import io.restassured.response.Response;
 
 public class test {
 @Test
- public void T() {
+ public void firsttest() {
 	
-	Response response = RestAssured.get();
+	Response response = RestAssured.get("https://reqres.in/api/users/2");
+	
 	
 	 
  }
