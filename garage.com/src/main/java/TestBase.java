@@ -1,10 +1,10 @@
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
-public class TestBase {
+public class TestBase extends {
   @Test
-  public void DriverTest(String browserType) {
-	  DriverManagerFactory driverManagerFactory = new DriverManagerFactory();
-	  driverManagerFactory.getmanager(browserType);
+  public void DriverTest() {
+	  HomePage URL = new HomePage(this.getDriver())
+				.navigate();
   }
 }
