@@ -33,7 +33,7 @@ public class LoginStepDefinition extends TestBases {
 		WebElement passwrd=getDriver().findElement(By.id("passwd"));
 		passwrd.sendKeys("Test15");
 		WebElement element=getDriver().findElement(By.id("SubmitLogin"));
-		element.click();  
+		element.click();
 	}
 
 	@Then("user is navigate to the homepage")
